@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.1.7'
-gem 'pg'
+gem 'pg', '0.17.1'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
-gem 'therubyracer', platforms: :ruby
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
+# gem 'therubyracer', platforms: :ruby
+gem 'jquery-rails', '3.1.2'
+gem 'jquery-ui-rails', '5.0.2'
 gem 'jbuilder', '~> 1.2'
 
 # Note: 3.2.1. has a bug that causes chain of UPDATE/DELETEs on annotations tagged when required tag removed
@@ -21,17 +21,17 @@ gem 'dropbox-sdk'
 gem 'will_paginate'
 gem 'RedCloth'
 gem 'formtastic', '~> 2.3.0.rc2'
-gem 'nokogiri', '~> 1.6'
+gem 'nokogiri', '1.6.6.4'
 gem 'actionpack-page_caching'
-gem 'exception_notification'
-gem 'rails-observers'
+# gem 'exception_notification', '4.0.1'
+gem 'rails-observers', '0.1.2'
 gem 'fastercsv'
 gem 'delayed_job'
 gem 'delayed_job_active_record'
 gem 'daemons', '1.0.10'
-gem 'rails_admin'
+gem 'rails_admin', '0.6.5'
 gem 'cancan'
-gem 'kaminari'
+gem 'kaminari', '0.16.1'
 # NOTE: recaptcha is no longer used, but we leave the gem here so the Recaptcha.configure
 #   call in the initializer (which is not in source control) does not blow up.
 gem 'recaptcha'

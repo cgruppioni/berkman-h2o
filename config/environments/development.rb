@@ -34,13 +34,13 @@ H2o::Application.configure do
   host = File.basename(Rails.root.to_s) + '.murk.law.harvard.edu:8000'
   config.action_mailer.default_url_options = { :host => host }
 
-  config.middleware.use ExceptionNotification::Rack,
-    :ignore_exceptions => ['ActionController::BadRequest'] + ExceptionNotifier.ignored_exceptions,
-    :email => {
-      :email_prefix => "[H2Odev] ",
-      :sender_address => %{"H2O Exception" <h2o+errors@cyber.law.harvard.edu>},
-      :exception_recipients => %w{h2o-exceptions@endpoint.com}
-    }
+  # config.middleware.use ExceptionNotification::Rack,
+  #   :ignore_exceptions => ['ActionController::BadRequest'] + ExceptionNotifier.ignored_exceptions,
+  #   :email => {
+  #     :email_prefix => "[H2Odev] ",
+  #     :sender_address => %{"H2O Exception" <h2o+errors@cyber.law.harvard.edu>},
+  #     :exception_recipients => %w{h2o-exceptions@endpoint.com}
+  #   }
 
   # Admin email to recieve the 'new user needs verification' emails
   config.user_verification_recipients = ['bgadoury@endpoint.com']

@@ -81,13 +81,13 @@ H2o::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  config.middleware.use ExceptionNotification::Rack,
-    :ignore_exceptions => ['ActionController::BadRequest', 'ActionView::MissingTemplate'] + ExceptionNotifier.ignored_exceptions,
-    :email => {
-      :email_prefix => "[H2O] ",
-      :sender_address => %{"H2O Exception" <h2o+errors@cyber.law.harvard.edu>},
-      :exception_recipients => %w{h2o-exceptions@endpoint.com} #later add h2o@cyber.law.harvard.edu
-    }
+  # config.middleware.use ExceptionNotification::Rack,
+  #   :ignore_exceptions => ['ActionController::BadRequest', 'ActionView::MissingTemplate'] + ExceptionNotifier.ignored_exceptions,
+  #   :email => {
+  #     :email_prefix => "[H2O] ",
+  #     :sender_address => %{"H2O Exception" <h2o+errors@cyber.law.harvard.edu>},
+  #     :exception_recipients => %w{h2o-exceptions@endpoint.com} #later add h2o@cyber.law.harvard.edu
+  #   }
 
   # Admin email to recieve the 'new user needs verification' emails
   config.user_verification_recipients = ['h2o@cyber.law.harvard.edu']
